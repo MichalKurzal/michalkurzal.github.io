@@ -11,6 +11,7 @@ export default function Cards() {
         justifyContent: "space-around",
         alignItems: "center",
         paddingTop: 10,
+        paddingBottom: 10,
       }}
     >
       <MediaCard />

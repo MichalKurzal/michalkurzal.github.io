@@ -3,10 +3,12 @@ import Grid from "@mui/material/Grid";
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import Cards from "./cards";
+import Footer from "./footer";
 
 export default function StartPage() {
   const style = {
     textAlign: "center",
+    marginBottom: 5,
   };
 
   const Img = styled("img")({
@@ -38,17 +40,20 @@ export default function StartPage() {
             }}
           >
             <Typography variant="h2" sx={style}>
-              Heading
+              Michal Kurzal's Portfolio
             </Typography>
             <Typography sx={style} variant="h4">
-              Loren dihsdius dsiudhgsui dsuidgauih fdduifhgs dsudhgskj sduhsjkdh
-              Loren dihsdius dsiudhgsui dsuidgauih fdduifhgs dsudhgskj sduhsjkdh
+              Hi, my name is Michal and I am a Javascript and Typesript
+              developer. I have solid skills in many frameworks, like Angular,
+              React , React Native or Ionic. I have expirience in cross platform
+              mobile and web Apps Development.
             </Typography>
-            <Button variant="contained">Contained</Button>
+            <Button variant="contained">Learn More</Button>
           </Grid>
         </Grid>
       </Grid>
       <Cards />
+      <Footer />
     </Grid>
   );
 }
