@@ -12,7 +12,7 @@ export default function MediaCard(props) {
       <CardMedia
         component="img"
         height="140"
-        image="/airplane.jpg"
+        image={props.data.src}
         alt="green iguana"
       />
       <CardContent>

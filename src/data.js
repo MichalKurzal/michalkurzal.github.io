@@ -1,5 +1,5 @@
 export const dataJSON = [
-  { title: "t1", id: 1 },
-  { title: "t2", id: 2 },
-  { title: "t3", id: 3 },
+  { title: "Mobile Apps Development", id: 1, src: "/source.jpg" },
+  { title: "Web Apps Development", id: 2, src: "/source.jpg" },
+  { title: "About Myself", id: 3, src: "/airplane.jpg" },
 ];
