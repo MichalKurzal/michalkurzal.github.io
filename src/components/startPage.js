@@ -28,28 +28,27 @@ export default function StartPage() {
         <Grid item xs={12} md={6}>
           <Img alt="complex" src="/desert.jpg" />
         </Grid>
-        <Grid container spacing={2} xs={12} md={6}>
-          <Grid
-            item
-            xs
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Typography variant="h2" sx={style}>
-              Michal Kurzal's Portfolio
-            </Typography>
-            <Typography sx={style} variant="h4">
-              Hi, my name is Michal and I am a Javascript and Typesript
-              developer. I have solid skills in many frameworks, like Angular,
-              React , React Native or Ionic. I have expirience in cross platform
-              mobile and web Apps Development.
-            </Typography>
-            <Button variant="contained">Learn More</Button>
-          </Grid>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Typography variant="h2" sx={style}>
+            Michal Kurzal's Portfolio
+          </Typography>
+          <Typography sx={style} variant="h4">
+            Hi, my name is Michal and I am a Javascript and Typesript developer.
+            I have solid skills in many frameworks, like Angular, React , React
+            Native or Ionic. I have expirience in cross platform mobile and web
+            Apps Development.
+          </Typography>
+          <Button variant="contained">Learn More</Button>
         </Grid>
       </Grid>
       <Cards />

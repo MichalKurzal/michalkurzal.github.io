@@ -1,28 +1,8 @@
-import { useEffect, useState } from "react";
 import MediaCard from "./card";
 import Grid from "@mui/material/Grid";
+import { dataJSON } from "../data";
 
 export default function Cards() {
-  const [data, setData] = useState([]);
-  const getData = () => {
-    fetch("data.json", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    })
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (myJson) {
-        setData(myJson);
-        console.log(myJson);
-      });
-  };
-  useEffect(() => {
-    getData();
-  }, []);
-
   return (
     <Grid
       container
@@ -35,8 +15,8 @@ export default function Cards() {
         paddingBottom: 10,
       }}
     >
-      {data.map((cardData) => {
-        return <MediaCard data={cardData} />;
+      {dataJSON.map((cardData, index) => {
+        return <MediaCard key={index} data={cardData} />;
       })}
     </Grid>
   );

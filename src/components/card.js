@@ -5,8 +5,8 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-export default function MediaCard(data) {
-  console.log("data", data.data.title);
+export default function MediaCard(props) {
+  console.log("data", props.data.title);
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
@@ -17,7 +17,7 @@ export default function MediaCard(data) {
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          {data.data.title}
+          {props.data.title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
           Lizards are a widespread group of squamate reptiles, with over 6,000
