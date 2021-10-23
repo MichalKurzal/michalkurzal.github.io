@@ -37,8 +37,25 @@ export default function MobileApps() {
         }}
       >
         <Typography variant="h2" sx={style}>
-          Mobile Apps Development
+          Web Apps Development
         </Typography>
+        <Typography variant="h4" sx={style}>
+          I have good knowlege of two very popular mobile frameworks
+        </Typography>
+        <Stack
+          direction="row"
+          sx={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            marginBottom: 5,
+          }}
+          spacing={1}
+          rowGap={2}
+        >
+          <Chip label="React-Native" color="primary" sx={{ fontSize: 24 }} />
+          <Chip label="Ionic" color="secondary" sx={{ fontSize: 24 }} />
+        </Stack>
         <Stack
           direction="row"
           sx={{
@@ -49,8 +66,6 @@ export default function MobileApps() {
           spacing={1}
           rowGap={2}
         >
-          <Chip label="React-Native" color="primary" />
-          <Chip label="Ionic" color="success" />
           <Chip label="Android Studio" color="primary" />
           <Chip label="Android" color="success" />
           <Chip label="Hybrid Apps" color="default" />
