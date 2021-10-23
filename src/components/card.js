@@ -5,6 +5,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { Link } from "react-router-dom";
 
 export default function MediaCard(props) {
   const onEnter = ({ currentTarget }) => {
@@ -36,7 +37,9 @@ export default function MediaCard(props) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Learn More</Button>
+        <Link to={props.data.path} style={{ textDecoration: "none" }}>
+          <Button size="small">Learn More</Button>
+        </Link>
       </CardActions>
     </Card>
   );
