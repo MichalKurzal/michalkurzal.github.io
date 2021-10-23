@@ -2,7 +2,7 @@ export const dataJSON = [
   {
     title: "Mobile Apps Development",
     id: 1,
-    src: "/source.jpg",
+    src: "/stock-market.jpg",
     about:
       "I have work expirience in developing mobile app using frameworks like react-native or ionic",
   },
