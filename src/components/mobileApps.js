@@ -39,7 +39,16 @@ export default function MobileApps() {
         <Typography variant="h2" sx={style}>
           Mobile Apps Development
         </Typography>
-        <Stack direction="row" spacing={1}>
+        <Stack
+          direction="row"
+          sx={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+          }}
+          spacing={1}
+          rowGap={2}
+        >
           <Chip label="React-Native" color="primary" />
           <Chip label="Ionic" color="success" />
           <Chip label="Android Studio" color="primary" />
