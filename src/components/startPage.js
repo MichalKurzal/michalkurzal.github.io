@@ -48,7 +48,9 @@ export default function StartPage() {
             Native or Ionic. I have expirience in cross platform mobile and web
             Apps Development.
           </Typography>
-          <Button variant="contained">Learn More</Button>
+          <Button variant="contained" href="#cards">
+            Learn More
+          </Button>
         </Grid>
       </Grid>
       <Cards />

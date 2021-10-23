@@ -5,6 +5,7 @@ import { dataJSON } from "../data";
 export default function Cards() {
   return (
     <Grid
+      id="cards"
       container
       sx={{
         display: "flex",
@@ -12,7 +13,6 @@ export default function Cards() {
         justifyContent: "space-around",
         alignItems: "center",
         paddingTop: 10,
-        paddingBottom: 10,
       }}
     >
       {dataJSON.map((cardData, index) => {
