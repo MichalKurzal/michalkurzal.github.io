@@ -21,6 +21,6 @@ export const dataJSON = [
     src: "/airplane.jpg",
     path: "/about",
     about:
-      "In my free time I Like to playing Computer Games and listening to the Music.",
+      "In my free time I Like to play Computer Games and listening to the Music.",
   },
 ];
