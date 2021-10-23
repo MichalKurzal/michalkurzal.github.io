@@ -37,7 +37,7 @@ export default function MobileApps() {
         }}
       >
         <Typography variant="h2" sx={style}>
-          Web Apps Development
+          Mobile Apps Development
         </Typography>
         <Typography variant="h4" sx={style}>
           I have good knowlege of two very popular mobile frameworks

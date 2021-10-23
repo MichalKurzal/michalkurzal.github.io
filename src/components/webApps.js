@@ -20,7 +20,11 @@ export default function WebApps() {
     <Grid
       container
       spacing={2}
-      sx={{ paddingTop: 4, paddingLeft: 2, paddingRight: 2 }}
+      sx={{
+        paddingTop: 4,
+        paddingLeft: 2,
+        paddingRight: 2,
+      }}
     >
       <Grid item xs={12} md={6}>
         <Img alt="complex" src="/source-L.jpg" />
@@ -70,6 +74,7 @@ export default function WebApps() {
           <Chip label="CSS" color="success" />
           <Chip label="JavaSript" color="default" />
           <Chip label="TypeScript" color="success" />
+          <Chip label="ES6+" color="secondary" />
           <Chip label="Node.js" color="info" />
           <Chip label="nmp" color="secondary" />
           <Chip label="yarn" color="primary" />
