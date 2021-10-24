@@ -6,6 +6,11 @@ import Cards from "./cards";
 import Footer from "./footer";
 
 export default function StartPage() {
+  const scroll = () => {
+    let element = document.getElementById("cards");
+    element.scrollIntoView();
+  };
+
   const style = {
     textAlign: "center",
     marginBottom: 5,
@@ -48,7 +53,7 @@ export default function StartPage() {
             Native or Ionic. I have expirience in cross platform mobile and web
             Apps Development.
           </Typography>
-          <Button variant="contained" href="#cards">
+          <Button variant="contained" onClick={scroll}>
             Learn More
           </Button>
         </Grid>
