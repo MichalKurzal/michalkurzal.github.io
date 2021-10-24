@@ -1,3 +1,5 @@
+import { useRef, useEffect } from "react";
+import { gsap } from "gsap";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import { styled } from "@mui/material/styles";
@@ -5,6 +7,11 @@ import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 
 export default function WebApps() {
+  let myRef = useRef([]);
+  useEffect(() => {
+    gsap.fromTo(myRef.current, { opacity: 0 }, { opacity: 0.7, duration: 1 });
+  }, []);
+
   const style = {
     textAlign: "center",
     marginBottom: 5,
@@ -40,10 +47,22 @@ export default function WebApps() {
           alignItems: "center",
         }}
       >
-        <Typography variant="h2" sx={style}>
+        <Typography
+          variant="h2"
+          sx={style}
+          ref={(element) => {
+            myRef.current[0] = element;
+          }}
+        >
           Web Apps Development
         </Typography>
-        <Typography variant="h4" sx={style}>
+        <Typography
+          variant="h4"
+          sx={style}
+          ref={(element) => {
+            myRef.current[1] = element;
+          }}
+        >
           I have good knowlege of two very popular JavaScript frameworks
         </Typography>
         <Stack
@@ -66,6 +85,7 @@ export default function WebApps() {
             display: "flex",
             flexWrap: "wrap",
             justifyContent: "center",
+            marginBottom: 5,
           }}
           spacing={1}
           rowGap={2}
