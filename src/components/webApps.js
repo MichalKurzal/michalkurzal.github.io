@@ -96,7 +96,7 @@ export default function WebApps() {
           <Chip label="TypeScript" color="success" />
           <Chip label="ES6+" color="secondary" />
           <Chip label="Node.js" color="info" />
-          <Chip label="nmp" color="secondary" />
+          <Chip label="npm" color="secondary" />
           <Chip label="yarn" color="primary" />
           <Chip label="Responsive Design" color="success" />
           <Chip label="Front-End Development" color="default" />

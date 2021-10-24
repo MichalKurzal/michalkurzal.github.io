@@ -18,7 +18,7 @@ export const dataJSON = [
   {
     title: "About Myself",
     id: 3,
-    src: "/airplane.jpg",
+    src: "/dna.jpg",
     path: "/about",
     about:
       "In my free time I Like to play Computer Games and listening to the Music.",
