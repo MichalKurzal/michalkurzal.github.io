@@ -14,6 +14,7 @@ export default function WebApps() {
 
   const style = {
     textAlign: "center",
+    fontFamily:"monospace",
     marginBottom: 5,
   };
 

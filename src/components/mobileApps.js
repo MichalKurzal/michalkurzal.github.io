@@ -13,6 +13,7 @@ export default function MobileApps() {
 
   const style = {
     textAlign: "center",
+    fontFamily:"monospace",
     marginBottom: 5,
   };
 

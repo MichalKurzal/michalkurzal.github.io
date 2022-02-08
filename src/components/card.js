@@ -8,6 +8,10 @@ import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
 
 export default function MediaCard(props) {
+  const style = {
+    fontFamily:"monospace"
+  };
+
   const onEnter = ({ currentTarget }) => {
     gsap.to(currentTarget, { scale: 1.2 });
   };
@@ -29,10 +33,10 @@ export default function MediaCard(props) {
         alt="green iguana"
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography gutterBottom variant="h5" component="div" sx={style}>
           {props.data.title}
         </Typography>
-        <Typography variant="body1" color="text.secondary">
+        <Typography variant="body1" color="text.secondary" sx={style}>
           {props.data.about}
         </Typography>
       </CardContent>

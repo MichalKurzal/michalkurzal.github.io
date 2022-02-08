@@ -5,15 +5,19 @@ import Button from "@mui/material/Button";
 import Cards from "./cards";
 import Footer from "./footer";
 
+
 export default function StartPage() {
-  const scroll = () => {
+
+
+ const scroll = () => {
     let element = document.getElementById("cards");
     element.scrollIntoView();
   };
 
   const style = {
-    textAlign: "center",
-    marginBottom: 5,
+    fontFamily:"monospace", 
+    marginBottom:5,
+    paddingLeft:15
   };
 
   const Img = styled("img")({
@@ -41,7 +45,7 @@ export default function StartPage() {
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            alignItems: "center",
+           
           }}
         >
           <Typography variant="h2" sx={style}>
@@ -53,7 +57,7 @@ export default function StartPage() {
             Native or Ionic. I have expirience in cross platform mobile and web
             Apps Development.
           </Typography>
-          <Button variant="contained" onClick={scroll}>
+          <Button variant="contained" onClick={scroll} sx={{width:200, marginLeft:15}}>
             Learn More
           </Button>
         </Grid>

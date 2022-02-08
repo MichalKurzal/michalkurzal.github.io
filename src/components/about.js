@@ -12,6 +12,7 @@ export default function About() {
 
   const style = {
     textAlign: "center",
+    fontFamily:"monospace",
     marginBottom: 5,
   };
 
