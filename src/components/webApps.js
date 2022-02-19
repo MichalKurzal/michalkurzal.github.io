@@ -44,7 +44,6 @@ export default function WebApps() {
         bgcolor: 'background.default',
         color: 'text.primary',
         overflow: 'auto'
-
       }}
     >
       <Grid item xs={12} md={12} xl={6} sx={{display: 'flex!important'}}>
