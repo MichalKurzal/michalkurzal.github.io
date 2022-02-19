@@ -1,12 +1,22 @@
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
+import { Grid } from '@mui/material';
+import {makeStyles} from '@mui/styles'
 import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
 import { styled } from "@mui/material/styles";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
+
+const useStylesContainer = makeStyles(theme => ({
+  root: {
+    height: '100vh',
+  }
+}));
+
 export default function MobileApps() {
   let myRef = useRef([]);
+  const classesContainer = useStylesContainer();
+
   useEffect(() => {
     gsap.fromTo(myRef.current, { opacity: 0 }, { opacity: 0.7, duration: 1 });
   }, []);
@@ -19,18 +29,19 @@ export default function MobileApps() {
 
   const Img = styled("img")({
     margin: "auto",
-    display: "block",
     maxWidth: "100%",
     maxHeight: "100%",
   });
 
   return (
     <Grid
+    className={classesContainer.root}
       container
       spacing={2}
-      sx={{ paddingTop: 4, paddingLeft: 2, paddingRight: 2 }}
+      sx={{ paddingTop: 4, paddingLeft: 2, paddingRight: 2 , bgcolor: 'background.default',
+      color: 'text.primary'}}
     >
-      <Grid item xs={12} md={12} xl={6}>
+      <Grid item xs={12} md={12} xl={6} sx={{display:'flex!important'}} justifyContent="center" alignItems="center" >
         <Img alt="complex" src="/stock-market-L.jpg" />
       </Grid>
       <Grid
@@ -43,6 +54,7 @@ export default function MobileApps() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
+          overflow: 'auto'
         }}
       >
         <Typography

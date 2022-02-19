@@ -31,7 +31,8 @@ export default function Footer() {
   );
 
   return (
-    <Grid container sx={{ bgcolor: "primary.main", padding: 2 }}>
+    <Grid container sx={{ bgcolor: 'background.default',
+    color: 'text.primary', padding: 2 }}>
       <Grid item xs={12} md={6} textAlign="center">
         <Typography variant="h6">Michal Kurzal 2021</Typography>
         <Typography variant="h6" textAlign="center">
