@@ -42,7 +42,7 @@ export default function MediaCard(props) {
       </CardContent>
       <CardActions>
         <Link to={props.data.path} style={{ textDecoration: "none" }}>
-          <Button size="small">Learn More</Button>
+          <Button size="small" variant="contained">Learn More</Button>
         </Link>
       </CardActions>
     </Card>

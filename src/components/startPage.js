@@ -16,8 +16,8 @@ export default function StartPage() {
 
   const style = {
     fontFamily:"monospace", 
-    marginBottom:5,
-    paddingLeft:15
+    marginBottom:2,
+    paddingLeft:2,
   };
 
   const Img = styled("img")({
@@ -28,24 +28,28 @@ export default function StartPage() {
   });
 
   return (
-    <Grid container>
+    <Grid container sx={{ width: 'auto', overflow:'hidden' }}>
       <Grid
         container
         spacing={2}
-        sx={{ paddingTop: 4, paddingLeft: 2, paddingRight: 2 }}
+        sx={{ paddingTop: 4, paddingLeft: 2, paddingRight: 2, margin:0 }}
       >
-        <Grid item xs={12} md={6}>
+        <Grid  xs={12} md={12} xl={6} sx={{display:'flex', alignContent:"center", padding:0}}>
           <Img alt="complex" src="/desert.jpg" />
         </Grid>
         <Grid
           item
           xs={12}
-          md={6}
+          md={12}
+          xl={6}
           sx={{
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-           
+            alignItems: 'flex-start',
+            width:'100%',
+            margin:0, 
+            padding:0,
           }}
         >
           <Typography variant="h2" sx={style}>
@@ -57,7 +61,7 @@ export default function StartPage() {
             Native or Ionic. I have expirience in cross platform mobile and web
             Apps Development.
           </Typography>
-          <Button variant="contained" onClick={scroll} sx={{width:200, marginLeft:15}}>
+          <Button variant="contained" onClick={scroll} sx={{width:200, marginLeft:5}}>
             Learn More
           </Button>
         </Grid>

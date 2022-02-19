@@ -33,13 +33,14 @@ export default function About() {
         paddingRight: 2,
       }}
     >
-      <Grid item xs={12} md={6}>
+      <Grid item xs={12} md={12} xl={6}>
         <Img alt="complex" src="/dna-L.jpg" />
       </Grid>
       <Grid
         item
         xs={12}
-        md={6}
+        md={12}
+        xl={6}
         sx={{
           display: "flex",
           flexDirection: "column",
