@@ -1,9 +1,5 @@
 import React, { useState } from "react";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import Grid from "@mui/material/Grid";
-import Snackbar from "@mui/material/Snackbar";
-import IconButton from "@mui/material/IconButton";
+import {Typography, Button, Grid, Snackbar, IconButton} from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 
 export default function Footer() {
@@ -31,7 +27,7 @@ export default function Footer() {
   );
 
   return (
-    <Grid container sx={{ bgcolor: 'background.default',
+    <Grid container sx={{ bgcolor: 'action.disabledBackground',
     color: 'text.primary', padding: 2 }}>
       <Grid item xs={12} md={6} textAlign="center">
         <Typography variant="h6">Michal Kurzal 2021</Typography>

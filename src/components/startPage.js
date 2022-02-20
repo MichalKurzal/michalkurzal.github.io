@@ -1,32 +1,27 @@
-import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
+import { useContext, useCallback } from 'react';
+import {Typography, Grid, Button, IconButton }from '@mui/material';
 import { styled } from '@mui/material/styles';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import NightlightIcon from '@mui/icons-material/Nightlight';
 import Cards from './cards';
 import Footer from './footer';
-import { useContext } from 'react';
 import AppContext from '../api/context';
-import { useCallback } from 'react';
-import { useState } from 'react';
+
 
 export default function StartPage() {
-    const { setTheme, theme, darkTheme } = useContext(AppContext);
-    const [dark, setDark] = useState(true);
+    const { setTheme, theme, darkTheme, mode, setMode } = useContext(AppContext);
     const scroll = () => {
         let element = document.getElementById('cards');
         element.scrollIntoView();
     };
 
     const toggleTheme = useCallback(() => {
-        setTheme((prevMode) => (prevMode === darkTheme ? theme : darkTheme));
-    }, []);
+        setTheme(mode ? theme: darkTheme)
+    }, [mode]);
 
     const toggleIcon = useCallback(() => {
-        setDark(!dark);
-    }, [dark]);
+        setMode(!mode);
+    }, [mode]);
 
     const style = {
         fontFamily: 'monospace',
@@ -60,9 +55,8 @@ export default function StartPage() {
                 <IconButton
                     aria-label="lightMode"
                     onClick={() => {toggleTheme(); toggleIcon() }}
-                 
                 >
-                    {dark ? <LightModeIcon /> : <NightlightIcon />}
+                    {mode ? <LightModeIcon /> : <NightlightIcon />}
                 </IconButton>
                 <Img alt="complex" src="/desert.jpg" />
             </Grid>

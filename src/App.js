@@ -2,33 +2,31 @@ import StartPage from './components/startPage';
 import MobileApps from './components/mobileApps';
 import WebApps from './components/webApps';
 import About from './components/about';
-import { green, orange, red } from '@mui/material/colors';
+import { cyan, green, red } from '@mui/material/colors';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import AppContext from './api/context';
-
 import './App.css';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 
 const primaryColor = green[600];
-const secondaryColor = orange[500];
+const secondaryColor = cyan[300];
 const dangerColor = red[900];
 
 function App() {
-  
-  const theme = createTheme({
-    palette: {
-        primary: {
-            main: primaryColor,
+    const theme = createTheme({
+        palette: {
+            primary: {
+                main: primaryColor,
+            },
+            secondary: {
+                main: secondaryColor,
+            },
+            error: {
+                main: dangerColor,
+            },
         },
-        secondary: {
-            main: secondaryColor,
-        },
-        error: {
-            main: dangerColor,
-        },
-    },
-});
+    });
 
     const darkTheme = createTheme({
         palette: {
@@ -36,9 +34,15 @@ function App() {
         },
     });
     const [_theme, setTheme] = useState(darkTheme);
+    const [mode, setMode] = useState(true);
+
+    const contx = useMemo(
+        () => ({ _theme, theme, darkTheme, setTheme, mode, setMode }),
+        [_theme, theme, darkTheme, mode]
+    );
 
     return (
-        <AppContext.Provider value={{ _theme,theme, darkTheme, setTheme }}>
+        <AppContext.Provider value={contx}>
             <ThemeProvider theme={_theme}>
                 <Router>
                     <Switch>
