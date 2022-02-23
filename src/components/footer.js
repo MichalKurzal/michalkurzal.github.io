@@ -1,56 +1,67 @@
-import React, { useState } from "react";
-import {Typography, Button, Grid, Snackbar, IconButton} from "@mui/material";
-import CloseIcon from "@mui/icons-material/Close";
+import React, { useState } from 'react';
+import { Typography, Button, Grid, Snackbar, IconButton } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
 
 export default function Footer() {
-  const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(false);
 
-  const handleClick = () => {
-    setOpen(true);
-  };
+    const handleClick = () => {
+        setOpen(true);
+    };
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+    const handleClose = () => {
+        setOpen(false);
+    };
 
-  const action = (
-    <React.Fragment>
-      <IconButton
-        size="small"
-        aria-label="close"
-        color="inherit"
-        onClick={handleClose}
-      >
-        <CloseIcon fontSize="small" />
-      </IconButton>
-    </React.Fragment>
-  );
+    const action = (
+        <React.Fragment>
+            <IconButton
+                size="small"
+                aria-label="close"
+                color="inherit"
+                onClick={handleClose}
+            >
+                <CloseIcon fontSize="small" />
+            </IconButton>
+        </React.Fragment>
+    );
 
-  return (
-    <Grid container sx={{ bgcolor: 'action.disabledBackground',
-    color: 'text.primary', padding: 2 }}>
-      <Grid item xs={12} md={6} textAlign="center">
-        <Typography variant="h6">Michal Kurzal 2021</Typography>
-        <Typography variant="h6" textAlign="center">
-          E-Mail: michalkurzal200@gmail.com
-        </Typography>
-      </Grid>
-      <Grid
-        item
-        xs={12}
-        md={6}
-        sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
-      >
-        <Button size="small" variant="contained" onClick={handleClick}>
-          Privacy Policy
-        </Button>
-        <Snackbar
-          open={open}
-          onClose={handleClose}
-          message="I am a private person and I do not colect any data. Only host of this site - github - colect some data. Please inform yourself abut github privacy policy"
-          action={action}
-        />
-      </Grid>
-    </Grid>
-  );
+    return (
+        <Grid
+            container
+            sx={{
+                bgcolor: 'action.disabledBackground',
+                color: 'text.primary',
+                padding: 2,
+            }}
+        >
+            <Grid item xs={12} md={6} textAlign="center">
+                <Typography variant="h6">Michal Kurzal 2021</Typography>
+                <Typography variant="h6" textAlign="center">
+                    E-Mail: michalkurzal200@gmail.com
+                </Typography>
+            </Grid>
+            <Grid
+                item
+                xs={12}
+                md={6}
+                sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                }}
+            >
+                <Button size="small" variant="contained" onClick={handleClick}>
+                    Privacy Policy
+                </Button>
+                <Snackbar
+                    sx={{ fontWeight: 'bold' }}
+                    open={open}
+                    onClose={handleClose}
+                    message="I am a private person and I do not collect any personal data. Only host of this site - github - collect some data. Please inform yourself abut github privacy policy"
+                    action={action}
+                />
+            </Grid>
+        </Grid>
+    );
 }
